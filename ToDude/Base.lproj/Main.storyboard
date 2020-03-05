@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item List View Controller-->
+        <!--ToDude-->
         <scene sceneID="Zp9-7h-8pj">
             <objects>
                 <tableViewController id="DJv-hv-Kf0" customClass="itemListViewController" customModule="ToDude" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="RuJ-Ew-Oty">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" id="RuJ-Ew-Oty" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RuJ-Ew-Oty" id="IKK-8W-f4y">
@@ -29,7 +29,13 @@
                             <outlet property="delegate" destination="DJv-hv-Kf0" id="91A-fh-QnW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1bD-cc-nza"/>
+                    <navigationItem key="navigationItem" title="ToDude" id="1bD-cc-nza">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gIc-dB-P6O">
+                            <connections>
+                                <action selector="addItemButtonTapped:" destination="DJv-hv-Kf0" id="h76-Yb-oZJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-4j-P9b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
